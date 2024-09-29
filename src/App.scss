@@ -1,0 +1,69 @@
+@import '~bootstrap/scss/bootstrap';
+
+.main-container {
+  margin: auto;
+  padding: 35px 10px;
+  max-width: 400px;
+}
+
+body {
+  --bs-body-font-size: 20px;
+}
+
+.btn {
+  --bs-btn-padding-y: 0.9rem;
+  --bs-btn-bg: #2d9bd7;
+  --bs-btn-border-color: #2d9bd7;
+  --bs-btn-hover-border-color: #1e6a94;
+  --bs-btn-hover-bg: #1e6a94;
+  --bs-btn-active-bg: #1e6a94;
+  --bs-btn-active-border-color: #1e6a94;
+  --bs-btn-disabled-bg: gray;
+  --bs-btn-disabled-border-color: gray;
+  --bs-btn-border-radius: 0;
+  --bs-btn-font-size: 20px;
+}
+
+.card {
+  --bs-card-font-size: 20px;
+  --bs-card-bg: #dcdcdc;
+  --bs-card-border-width: 0;
+  --bs-card-title-spacer-y: 0;
+  margin-top: 10px;
+  border-radius: 0;
+  min-height: 120px;
+
+  &-title {
+    font-size: 24px;
+  }
+  
+  &-text {
+    font-size: 18px;
+  }
+}
+
+.accordion {
+  --bs-accordion-font-size: 20px;
+  --bs-accordion-border-width: 0;
+  --bs-accordion-body-padding-y: 0;
+  --bs-accordion-btn-icon: url('~assets/chevron.svg');
+  --bs-accordion-btn-active-icon: url('~assets/chevron.svg');
+  margin-top: 10px;
+  
+  &-body {
+    padding-right: 0;
+  }
+  
+  &-button {
+    font-size: 20px;
+  }
+
+  &-header {
+    --bs-accordion-active-bg: #f0f0f0;
+    --bs-accordion-active-color: black;
+    --bs-accordion-btn-bg: #f0f0f0;
+    --bs-accordion-btn-color: black;
+  }
+}
+
+

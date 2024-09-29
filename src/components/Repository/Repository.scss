@@ -1,0 +1,16 @@
+.flexTitle {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  font-weight: bold;
+}
+
+.stargazersCount {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.stargazersText {
+  margin-right: 6px;
+}

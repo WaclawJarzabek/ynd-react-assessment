@@ -1,0 +1,22 @@
+.formContainer {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+}
+
+.submitButton {
+  width: 100%;
+}
+
+.usernameInput {
+  width: 100%;
+  height: 45px;
+  padding: 15px;
+  background-color: #f0f0f0;
+  border: #e3e3e3 1px solid;
+}
+
+.marginBotton {
+  margin-bottom: 20px;
+}
