@@ -45,12 +45,12 @@ export const NameForm = () => {
     <>
     <div className="formContainer">
     <form onSubmit={handleSubmit}>
-      <input className="usernameInput marginBotton" id="name" name="name" placeholder="Enter username" type="text" onChange={handleChange} value={values.name} />
-      <Button className="submitButton" type="submit">Search</Button> 
+      <input cy-data="input" className="usernameInput marginBotton" id="name" name="name" placeholder="Enter username" type="text" onChange={handleChange} value={values.name} />
+      <Button cy-data="submit" className="submitButton" type="submit">Search</Button> 
     </form>
     </div>
     <div className="listContainer">
-      {userSearchResult.isSuccess ? <UserList searchedName={cachedName.current}>{userSearchResult.data.data.items}</UserList> : null}
+      {userSearchResult.isSuccess ? <UserList searchedName={cachedName.current}>{userSearchResult.data.data.items}</UserList> : userSearchResult.isError ? 'something went wrong, please check your internet connection' : null}
     </div>
     </>
   );

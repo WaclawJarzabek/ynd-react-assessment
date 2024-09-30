@@ -11,8 +11,8 @@ export interface UserListProps {
 
 export const UserList = ({ children, searchedName }: UserListProps) => {
   return (
-    <div>
-      {searchedName ? <div className="searchedName">Showing results for "{searchedName}"</div> : null}
+    <div cy-data="user-list">
+      {searchedName ? <div cy-data="user-search-result" className="searchedName">Showing results for "{searchedName}"</div> : null}
       {children.map((item: SearchedUser) => {
         return <User key={item.id} {...item}></User>;
       })}

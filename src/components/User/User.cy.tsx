@@ -3,7 +3,13 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { User } from './index'
 import { RepoData, SearchedUser } from '@/types';
 
-const queryClient = new QueryClient({})
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: false
+    }
+  }
+})
 const Wrapper = ({ children }: any) => (
   <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
 )
@@ -118,5 +124,18 @@ describe('<User />', () => {
     cy.wait(300)
     cy.get('[data-cy=user-body]').should('be.visible')
     cy.get('[data-cy=repository').should('have.length', 2)
+  })
+
+  it('Should show error message when request fails', () => {
+    cy.intercept('GET', '/users/john-doe/repos', {
+      statusCode: 500,
+    });
+
+    cy.mount(<Wrapper><User {...exampleUser} /></Wrapper>)
+    cy.get('[data-cy=user-body]').should('not.be.visible')
+    cy.get('[data-cy=user-name]').click()
+    cy.get('[data-cy=user-body]').should('be.visible')
+    cy.get('[data-cy=user-body]').should('have.text', 'something went wrong, check your internet connection')
+    cy.get('[data-cy=repository').should('not.exist')
   })
 })

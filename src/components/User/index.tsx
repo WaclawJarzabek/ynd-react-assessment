@@ -14,9 +14,7 @@ export const User = ({ login, repos_url }: SearchedUser) => {
     queryKey: ["userRepos", repos_url, userExpanded],
     queryFn: ({ pageParam }) => {
       const targetUrl = pageParam ? pageParam : repos_url;
-      return axios.get(targetUrl, {headers: HEADERS}).then(response => {
-        return response;
-      });
+      return axios.get(targetUrl, {headers: HEADERS});
     },
     enabled: userExpanded,
     initialPageParam: '',
@@ -62,7 +60,7 @@ export const User = ({ login, repos_url }: SearchedUser) => {
         </Accordion.Header>
         <Accordion.Body data-cy="user-body" onEnter={handleExpansion} onExited={handleExit}>
           <>
-            {repoQuery.isPending ? 'loading...' : repoQuery.isSuccess ? renderRepoData() : 'something went wrong, check your internet connection'}</>
+            {repoQuery.isPending ? 'loading...' : renderRepoData()}</>
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
