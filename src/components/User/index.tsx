@@ -3,9 +3,9 @@ import parseLinkHeader from 'parse-link-header';
 import Accordion from 'react-bootstrap/Accordion';
 import { useState } from 'react';
 import { useInfiniteQuery } from '@tanstack/react-query';
-import { Repository } from '../Repository';
-import { HEADERS } from '../../const';
-import { RepoData, SearchedUser } from '../../types';
+import { Repository } from '@components/Repository';
+import { HEADERS } from '@/const';
+import { RepoData, SearchedUser } from '@/types';
 
 
 export const User = ({ login, repos_url }: SearchedUser) => {

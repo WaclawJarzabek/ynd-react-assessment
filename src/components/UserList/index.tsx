@@ -1,5 +1,5 @@
-import { SearchedUser } from '../../types';
-import { User } from '../User';
+import { SearchedUser } from '@/types';
+import { User } from '@components/User';
 
 import './UserList.scss';
 

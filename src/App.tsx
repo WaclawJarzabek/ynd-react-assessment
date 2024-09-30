@@ -1,6 +1,6 @@
 import React from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { NameForm } from './components/NameForm';
+import { NameForm } from '@components/NameForm';
 
 import './App.scss';
 

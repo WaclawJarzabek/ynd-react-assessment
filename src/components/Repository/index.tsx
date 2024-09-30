@@ -1,6 +1,6 @@
 import Card from 'react-bootstrap/Card';
-import { RepoData } from '../../types';
-import { ReactComponent as StarIcon } from '../../assets/star.svg';
+import { RepoData } from '@/types';
+import { ReactComponent as StarIcon } from '@assets/star.svg';
 
 import './Repository.scss';
 

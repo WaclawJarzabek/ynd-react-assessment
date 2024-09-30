@@ -4,9 +4,9 @@ import * as Yup from 'yup';
 import { useRef } from 'react';
 import { useMutation } from '@tanstack/react-query';
 import { useFormik } from 'formik';
-import { UserList } from '../UserList';
-import { API_ADDRESS, HEADERS } from '../../const';
-import { UserSearchResult } from '../../types';
+import { UserList } from '@components/UserList';
+import { API_ADDRESS, HEADERS } from '@/const';
+import { UserSearchResult } from '@/types';
 
 import './NameForm.scss';
 
