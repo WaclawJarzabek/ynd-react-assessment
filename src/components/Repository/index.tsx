@@ -6,15 +6,15 @@ import './Repository.scss';
 
 
 export const Repository = ({name, description, stargazers_count}: RepoData) => {
-	return <Card>
+	return <Card data-cy="repository">
 		<Card.Body>
 			<Card.Title>
 				<div className="flexTitle">
-					<div>{name}</div>
-					<div className="stargazersCount"><span className="stargazersText">{stargazers_count}</span> <StarIcon /></div>
+					<div data-cy="repository-title">{name}</div>
+					<div className="stargazersCount"><span className="stargazersText" data-cy="repository-stargazers-count">{stargazers_count}</span> <StarIcon /></div>
 				</div>
 			</Card.Title>
-			<Card.Text>
+			<Card.Text data-cy="repository-description">
 				{description}
 			</Card.Text>
 		</Card.Body>

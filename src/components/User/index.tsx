@@ -57,10 +57,10 @@ export const User = ({ login, repos_url }: SearchedUser) => {
   return (
     <Accordion>
       <Accordion.Item eventKey="0">
-        <Accordion.Header>
+        <Accordion.Header data-cy="user-name">
           {login}
         </Accordion.Header>
-        <Accordion.Body onEnter={handleExpansion} onExited={handleExit}>
+        <Accordion.Body data-cy="user-body" onEnter={handleExpansion} onExited={handleExit}>
           <>
             {repoQuery.isPending ? 'loading...' : repoQuery.isSuccess ? renderRepoData() : 'something went wrong, check your internet connection'}</>
         </Accordion.Body>
